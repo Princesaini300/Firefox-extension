@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All-in-One Productivity Suite</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🚀 Productivity Suite</h1>
+            <button id="settings-btn" class="settings-btn" title="Settings">⚙️</button>
+        </header>
+
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="home">Home</button>
+            <button class="tab-btn" data-tab="tools">Tools</button>
+            <button class="tab-btn" data-tab="favorites">Favorites</button>
+        </nav>
+
+        <!-- Home Tab -->
+        <div id="home" class="tab-content active">
+            <div class="welcome-section">
+                <h2>Welcome to Productivity Suite</h2>
+                <p>Your all-in-one browser extension for enhanced productivity</p>
+            </div>
+            <div class="quick-tools">
+                <button class="quick-tool-btn" data-tool="calculator">
+                    <span class="icon">🧮</span>
+                    <span>Calculator</span>
+                </button>
+                <button class="quick-tool-btn" data-tool="translator">
+                    <span class="icon">🌐</span>
+                    <span>Translator</span>
+                </button>
+                <button class="quick-tool-btn" data-tool="weather">
+                    <span class="icon">🌤️</span>
+                    <span>Weather</span>
+                </button>
+                <button class="quick-tool-btn" data-tool="qr">
+                    <span class="icon">📱</span>
+                    <span>QR Code</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Tools Tab -->
+        <div id="tools" class="tab-content">
+            <div class="tools-grid">
+                <div class="tool-card" data-tool="ai-chatbot">
+                    <div class="tool-icon">🤖</div>
+                    <h3>AI Chatbot</h3>
+                    <p>Chat with AI assistant</p>
+                </div>
+                <div class="tool-card" data-tool="ad-blocker">
+                    <div class="tool-icon">🛡️</div>
+                    <h3>Ad Blocker</h3>
+                    <p>Block ads and trackers</p>
+                </div>
+                <div class="tool-card" data-tool="screenshot">
+                    <div class="tool-icon">📸</div>
+                    <h3>Screenshot</h3>
+                    <p>Capture screen</p>
+                </div>
+                <div class="tool-card" data-tool="youtube-downloader">
+                    <div class="tool-icon">▶️</div>
+                    <h3>YouTube Downloader</h3>
+                    <p>Download videos</p>
+                </div>
+                <div class="tool-card" data-tool="translator">
+                    <div class="tool-icon">🌐</div>
+                    <h3>Translator</h3>
+                    <p>Translate text</p>
+                </div>
+                <div class="tool-card" data-tool="weather">
+                    <div class="tool-icon">🌤️</div>
+                    <h3>Weather Widget</h3>
+                    <p>Check weather</p>
+                </div>
+                <div class="tool-card" data-tool="calculator">
+                    <div class="tool-icon">🧮</div>
+                    <h3>Calculator</h3>
+                    <p>Quick calculations</p>
+                </div>
+                <div class="tool-card" data-tool="vpn-checker">
+                    <div class="tool-icon">🔒</div>
+                    <h3>VPN Checker</h3>
+                    <p>Check VPN status</p>
+                </div>
+                <div class="tool-card" data-tool="qr-generator">
+                    <div class="tool-icon">📱</div>
+                    <h3>QR Generator</h3>
+                    <p>Generate QR codes</p>
+                </div>
+                <div class="tool-card" data-tool="bookmark-manager">
+                    <div class="tool-icon">🔖</div>
+                    <h3>Bookmark Manager</h3>
+                    <p>Manage bookmarks</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Favorites Tab -->
+        <div id="favorites" class="tab-content">
+            <div id="favorites-list" class="favorites-list">
+                <p class="empty-message">No favorites yet. Add tools to your favorites!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tool Windows (Modal-like) -->
+    <div id="tool-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div id="tool-container"></div>
+        </div>
+    </div>
+
+    <script src="../js/popup.js"></script>
+</body>
+</html>
